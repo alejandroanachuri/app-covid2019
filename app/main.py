@@ -19,12 +19,12 @@ df = pd.DataFrame({
     "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
 })
 
-data_codiv = requests.get('https://api.covid19api.com/summary')
-df = pd.DataFrame(data_codiv.json()['Countries'])
+#data_codiv = requests.get('https://api.covid19api.com/summary')
+#df = pd.DataFrame(data_codiv.json()['Countries'])
 
 
-#fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
-fig = px.bar(df[df['Country'].isin(['Argentina','Brazil', 'Chile'])], x="Country", y="TotalDeaths", color="Country", barmode="group")
+fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+#fig = px.bar(df[df['Country'].isin(['Argentina','Brazil', 'Chile'])], x="Country", y="TotalDeaths", color="Country", barmode="group")
 
 app.layout = html.Div(children=[
     html.H1(children='Hello Dash'),
