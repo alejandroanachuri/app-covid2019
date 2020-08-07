@@ -43,7 +43,14 @@ if __name__ == '__main__':
     app.run_server(debug=True)"""
 
 from flask import Flask
+import pandas as pd
+import json
+import requests
+
 app = Flask(__name__)
+data_codiv = requests.get('https://api.covid19api.com/summary')
+df = pd.DataFrame(data_codiv.json()['Countries'])
+
 
 @app.route('/')
 def hello_world():
