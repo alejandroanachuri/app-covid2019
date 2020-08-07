@@ -1,4 +1,4 @@
-import dash
+"""import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
@@ -40,4 +40,14 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True)"""
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()    
