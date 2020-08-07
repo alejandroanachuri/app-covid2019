@@ -51,8 +51,8 @@ import json
 import requests
 
 #app = Flask(__name__)
-data_codiv = requests.get('https://api.covid19api.com/summary')
-df = pd.DataFrame(data_codiv.json()['Countries'])
+#data_codiv = requests.get('https://api.covid19api.com/summary')
+#df = pd.DataFrame(data_codiv.json()['Countries'])
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
